@@ -1,0 +1,11 @@
+version: "3.8"
+
+services: 
+    
+    subscriber_container:
+        image: logger_image
+        volumes: 
+            - /home/sayali_karnewar/Documents/follo/logger:/subscriber_container
+        working_dir: /subscriber_container
+        command: python3 -u subscriber.py
+        network_mode: "host"
